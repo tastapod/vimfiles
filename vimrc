@@ -52,6 +52,9 @@ highlight MatchParen cterm=bold ctermbg=none ctermfg=none
 " Ruby
 autocmd BufRead,BufNewFile *.rb,*.rake,Rakefile    set ts=2 sw=2 nu
 
+" Python
+let g:pydiction_location = '$HOME/.vim/bundle/Pydiction/complete-dict'
+
 " Scala
 autocmd BufRead,BufNewFile *.scala          set ts=2 sw=2 nu
 
