@@ -68,9 +68,8 @@ autocmd BufRead,BufNewFile *.clj            nmap ,i <Plug>ClojureDocLookupIntera
 autocmd BufRead,BufNewFile *.clj            nmap ,j <Plug>ClojureJavadocLookupWord
 autocmd BufRead,BufNewFile *.clj            nmap ,r <Plug>ClojureStartRepl
 
-let g:clj_want_gorilla = 1
-let g:clj_highlight_builtins = 1
-let g:clj_highlight_contrib = 1
+let vimclojure#WantNailgun = 1
+let vimclojure#HighlightBuiltins = 1
 "let maplocalleader = ","
 
 " Shell scripts
