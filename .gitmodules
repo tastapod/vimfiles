@@ -1,12 +1,12 @@
 [submodule "vim-pathogen"]
 	path = vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-surround"]
+[submodule "vim/bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-matchit"]
+[submodule "vim/bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = git://github.com/edsono/vim-matchit.git
-[submodule "bundle/vim-rails"]
+[submodule "vim/bundle/vim-rails"]
 	path = bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git

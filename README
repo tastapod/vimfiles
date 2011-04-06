@@ -1,7 +1,7 @@
 # This is my vim setup. Just do:
 
-ln -s /path/to/vim ~/.vim
-ln -s /path/to/vim/vimrc ~/.vimrc
+ln -s /path/to/vimfiles/vim ~/.vim
+ln -s /path/to/vimfiles/vimrc ~/.vimrc
 
 # I'm using pathogen to keep all my vim plugins in separate directories,
 # and git submodules to manage both pathogen itself and all the plugins.
