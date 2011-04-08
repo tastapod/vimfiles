@@ -1,9 +1,11 @@
-# This is my vim setup. Just do:
-
-ln -s /path/to/vimfiles/vim ~/.vim
-ln -s /path/to/vimfiles/vimrc ~/.vimrc
-
+# This is my vim setup.
+#
 # I'm using pathogen to keep all my vim plugins in separate directories,
 # and git submodules to manage both pathogen itself and all the plugins.
 #
-# That means I have a single git repo to clone to get a full vim setup.
+# To get started, just move your existing .vim and .vimrc out of the way and
+# source this file, or type the following:
+
+git clone --recursive git://github.com/tastapod/vimfiles.git
+ln -s /path/to/vimfiles/vim ~/.vim
+ln -s /path/to/vimfiles/vimrc ~/.vimrc
