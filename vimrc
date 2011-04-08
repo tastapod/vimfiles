@@ -2,19 +2,21 @@
 set ai sw=2 ts=2 sts=2 et
 set fo=tcrqwn
 set showmatch matchtime=5
-syntax on
 
 " Filetypes
 filetype off " forces reload
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-"filetype plugin indent on
+filetype plugin indent on
+syntax on
 
 " Searching
 set incsearch hlsearch
 set ignorecase smartcase
 set tags=tags,./tags
+nmap <silent> <C-c> <Esc>:!ctags -R<CR><CR>
 nmap <silent> <C-h> <Esc>:call ToggleHLSearch()<CR>
+set completeopt+=longest
 
 function ToggleHLSearch()
   if &hls
@@ -43,17 +45,13 @@ cabbr <expr> %% expand('%:p:h')
 " Editor behaviour
 set autowrite
 set whichwrap=<,>,h,l,[,]
+"set cursorline
+"highlight CursorLine cterm=none ctermbg=black
+"highlight MatchParen cterm=bold ctermbg=none ctermfg=none
 set background=dark
-"colorscheme desert
-set cursorline
-highlight CursorLine cterm=none ctermbg=darkgrey
-highlight MatchParen cterm=bold ctermbg=none ctermfg=none
 
 " Ruby
 autocmd BufRead,BufNewFile *.rb,*.rake,Rakefile    set ts=2 sw=2 nu
-
-" Python
-let g:pydiction_location = '$HOME/.vim/bundle/Pydiction/complete-dict'
 
 " Scala
 autocmd BufRead,BufNewFile *.scala          set ts=2 sw=2 nu
