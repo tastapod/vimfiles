@@ -4,8 +4,8 @@
 # and git submodules to manage both pathogen itself and all the plugins.
 #
 # To get started, just move your existing .vim and .vimrc out of the way and
-# source this file, or type the following:
+# source this file, or type the following from wherever you want to install:
 
 git clone --recursive git://github.com/tastapod/vimfiles.git
-ln -s /path/to/vimfiles/vim ~/.vim
-ln -s /path/to/vimfiles/vimrc ~/.vimrc
+ln -s $PWD/vimfiles/vim ~/.vim
+ln -s $PWD/vimfiles/vimrc ~/.vimrc
