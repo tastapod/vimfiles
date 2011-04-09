@@ -1,3 +1,6 @@
+" General
+set nocompatible
+
 " Editing
 set ai sw=2 ts=2 sts=2 et
 set fo=tcrqwn
@@ -15,21 +18,13 @@ set incsearch hlsearch
 set ignorecase smartcase
 set tags=tags,./tags
 nmap <silent> <C-c> <Esc>:!ctags -R<CR><CR>
-nmap <silent> <C-h> <Esc>:call ToggleHLSearch()<CR>
+nmap <silent> <C-h> <Esc>:set invhls<CR>:set hls?<CR>
+
+" Completions
+set wildmode=longest:full
 set completeopt+=longest
 
-function ToggleHLSearch()
-  if &hls
-    set nohls
-  else
-    set hls
-  endif
-endfunction
-
-" Commands
-set wildmode=longest:full
-
-" Where to store .swp files
+" Store .swp files in /tmp with mangled names
 set directory=/tmp//
 
 " Navigating windows
