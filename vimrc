@@ -18,11 +18,10 @@ set incsearch hlsearch
 set ignorecase smartcase
 set tags=tags,./tags
 nmap <silent> <C-c> <Esc>:!ctags -R<CR><CR>
-nmap <silent> <C-h> <Esc>:set invhls<CR>:set hls?<CR>
+nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
-set wildmode=longest:full
-set completeopt+=longest
+set wildmenu wildmode=full completeopt+=longest
 
 " Store .swp files in /tmp with mangled names
 set directory=/tmp//
@@ -30,6 +29,17 @@ set directory=/tmp//
 " Navigating windows
 nmap <C-N> <C-W>w
 nmap <C-P> <C-W>W
+nmap ,n <C-W>w
+nmap ,p <C-W>W
+nmap ,H <C-W>H
+nmap ,J <C-W>J
+nmap ,K <C-W>K
+nmap ,L <C-W>L
+nmap ,= <C-W>=
+nmap ,t <C-W>T
+nmap ,f <C-W>r
+nmap ,b <C-W>R
+
 set hidden
 set equalalways
 set mouse=a
