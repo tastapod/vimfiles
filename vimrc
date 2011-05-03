@@ -50,9 +50,6 @@ cabbr <expr> %% expand('%:p:h')
 " Editor behaviour
 set autowrite
 set whichwrap=<,>,h,l,[,]
-"set cursorline
-"highlight CursorLine cterm=none ctermbg=black
-"highlight MatchParen cterm=bold ctermbg=none ctermfg=none
 set background=dark
 
 " Ruby
