@@ -2,9 +2,14 @@
 set nocompatible
 
 " Editing
-set ai sw=2 ts=2 sts=2 et
+set aw ai sw=2 ts=2 sts=2 et
 set fo=tcrqwn
 set showmatch matchtime=5
+set whichwrap=<,>,h,l,[,]
+set cursorline
+highlight CursorLine cterm=bold
+"set background=dark
+
 
 " Filetypes
 filetype off " forces reload
@@ -42,21 +47,14 @@ nmap ,b <C-W>R
 
 set hidden
 set equalalways
+set splitbelow splitright
 set mouse=a
 
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:p:h')
 
-" Editor behaviour
-set autowrite
-set whichwrap=<,>,h,l,[,]
-"set cursorline
-"highlight CursorLine cterm=none ctermbg=black
-"highlight MatchParen cterm=bold ctermbg=none ctermfg=none
-set background=dark
-
 " Ruby
-autocmd BufRead,BufNewFile *.rb,*.rake,Rakefile    set ts=2 sw=2 nu
+autocmd BufRead,BufNewFile *.rb,*.ru,*.rake,Rakefile    set filetype=ruby ts=2 sw=2 nu
 
 " Scala
 autocmd BufRead,BufNewFile *.scala          set ts=2 sw=2 nu
@@ -74,6 +72,7 @@ autocmd BufRead,BufNewFile *.clj            nmap ,r <Plug>ClojureStartRepl
 let vimclojure#WantNailgun = 1
 let vimclojure#HighlightBuiltins = 1
 "let maplocalleader = ","
+let mapleader = ","
 
 " Shell scripts
 let g:is_bash=1
