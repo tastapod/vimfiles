@@ -54,7 +54,10 @@ set mouse=a
 cabbr <expr> %% expand('%:p:h')
 
 " Ruby
-autocmd BufRead,BufNewFile *.rb,*.ru,*.rake,Rakefile    set filetype=ruby ts=2 sw=2 nu
+autocmd BufRead,BufNewFile *.rb,*.ru,*.rake,Rakefile    set filetype=ruby ts=2 sts=2 sw=2 et nu
+
+" Python
+autocmd BufRead,BufNewFile *.py             set filetype=python ts=2 sts=2 sw=2 et nu
 
 " Scala
 autocmd BufRead,BufNewFile *.scala          set ts=2 sw=2 nu
