@@ -8,13 +8,12 @@ set showmatch matchtime=5
 set whichwrap=<,>,h,l,[,]
 set cursorline
 highlight CursorLine cterm=bold
-"set background=dark
-
+highlight MatchParen ctermbg=white
 
 " Filetypes
-filetype off " forces reload
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+filetype off " forces reload
 filetype plugin indent on
 syntax on
 
@@ -50,27 +49,28 @@ set equalalways
 set splitbelow splitright
 set mouse=a
 
+" Sessions
+let sessionman_save_on_exit = 1
+
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:p:h')
 
-" Ruby
-autocmd BufRead,BufNewFile *.rb,*.ru,*.rake,Rakefile    set filetype=ruby ts=2 sts=2 sw=2 et nu
+" General programming stuff
+autocmd BufRead,BufNewFile *.ru                  set filetype=ruby
+autocmd BufNewFile,BufRead *.inc                 set filetype=sh
+autocmd FileType ruby,python,javascript,clojure  set ts=2 sts=2 sw=2 et nu
 
-" Python
-autocmd BufRead,BufNewFile *.py             set filetype=python ts=2 sts=2 sw=2 et nu
-
-" Scala
-autocmd BufRead,BufNewFile *.scala          set ts=2 sw=2 nu
+" Coffee-Script
+let coffee_compile_on_save = 1
 
 " Clojure
-autocmd BufRead,BufNewFile *.clj            set ts=2 sw=2 nu
-autocmd BufRead,BufNewFile *.clj            nmap ,s <Plug>ClojureEvalToplevel
-autocmd BufRead,BufNewFile *.clj            nmap ,f <Plug>ClojureEvalFile
-autocmd BufRead,BufNewFile *.clj            nmap ,b <Plug>ClojureEvalBlock
-autocmd BufRead,BufNewFile *.clj            nmap ,d <Plug>ClojureDocLookupWord
-autocmd BufRead,BufNewFile *.clj            nmap ,i <Plug>ClojureDocLookupInteractive
-autocmd BufRead,BufNewFile *.clj            nmap ,j <Plug>ClojureJavadocLookupWord
-autocmd BufRead,BufNewFile *.clj            nmap ,r <Plug>ClojureStartRepl
+autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
+autocmd FileType clojure nmap ,f <Plug>ClojureEvalFile
+autocmd FileType clojure nmap ,b <Plug>ClojureEvalBlock
+autocmd FileType clojure nmap ,d <Plug>ClojureDocLookupWord
+autocmd FileType clojure nmap ,i <Plug>ClojureDocLookupInteractive
+autocmd FileType clojure nmap ,j <Plug>ClojureJavadocLookupWord
+autocmd FileType clojure nmap ,r <Plug>ClojureStartRepl
 
 let vimclojure#WantNailgun = 1
 let vimclojure#HighlightBuiltins = 1
@@ -80,4 +80,3 @@ let mapleader = ","
 " Shell scripts
 let g:is_bash=1
 "let g:sh_fold_enabled=7
-autocmd BufNewFile,BufRead *.inc            set filetype=sh
