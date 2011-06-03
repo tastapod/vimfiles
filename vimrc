@@ -30,7 +30,7 @@ set wildmenu wildmode=full completeopt+=longest
 " Store .swp files in /tmp with mangled names
 set directory=/tmp//
 
-" Navigating windows
+" Using windows
 nmap <C-N> <C-W>w
 nmap <C-P> <C-W>W
 nmap ,n <C-W>w
@@ -43,11 +43,13 @@ nmap ,= <C-W>=
 nmap ,t <C-W>T
 nmap ,f <C-W>r
 nmap ,b <C-W>R
-
 set hidden
 set equalalways
 set splitbelow splitright
 set mouse=a
+
+" NERD-Tree
+nmap <F9> :NERDTreeToggle<CR>
 
 " Sessions
 let sessionman_save_on_exit = 1
@@ -55,7 +57,7 @@ let sessionman_save_on_exit = 1
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:p:h')
 
-" General programming stuff
+" General programming
 autocmd BufRead,BufNewFile *.ru                  set filetype=ruby
 autocmd BufNewFile,BufRead *.inc                 set filetype=sh
 autocmd FileType ruby,python,javascript,clojure  set ts=2 sts=2 sw=2 et nu
