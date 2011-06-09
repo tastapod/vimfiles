@@ -7,6 +7,7 @@ set fo=tcrqwn
 set showmatch matchtime=5
 set whichwrap=<,>,h,l,[,]
 set cursorline
+set nofoldenable
 highlight CursorLine cterm=bold
 highlight MatchParen ctermbg=white
 
