@@ -2,7 +2,8 @@
 set nocompatible
 
 " Editing
-set aw ai sw=2 ts=2 sts=2 et
+set aw ai
+set et ts=8 sts=2 sw=2 nu
 set fo=tcrqwn
 set showmatch matchtime=5
 set whichwrap=<,>,h,l,[,]
@@ -27,9 +28,11 @@ nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
 set wildmenu wildmode=full completeopt+=longest
+set wildignore+=**/node_modules,**/classes,**/tmp,*.pyc,*.o,*.a,*.class,.git,.hg,.svn,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2
+let g:CommandTAcceptSelectionSplitMap='<C-w>'
 
-" Store .swp files in /tmp with mangled names
-set directory=/tmp//
+" Store .swp files in /var/tmp with mangled names
+set directory=/var/tmp//
 
 " Using windows
 nmap <C-N> <C-W>w
@@ -41,9 +44,9 @@ nmap ,J <C-W>J
 nmap ,K <C-W>K
 nmap ,L <C-W>L
 nmap ,= <C-W>=
-nmap ,t <C-W>T
-nmap ,f <C-W>r
-nmap ,b <C-W>R
+nmap ,T <C-W>T
+nmap ,r <C-W>r
+nmap ,R <C-W>R
 set hidden
 set equalalways
 set splitbelow splitright
@@ -53,18 +56,20 @@ set mouse=a
 nmap <F9> :NERDTreeToggle<CR>
 
 " Sessions
+set viminfo=!,'100,<50,s10,h
 let sessionman_save_on_exit = 1
 
 " Let %% expands to directory of %
-cabbr <expr> %% expand('%:p:h')
+cabbr <expr> %% expand('%:h')
 
 " General programming
-autocmd BufRead,BufNewFile *.ru                  set filetype=ruby
-autocmd BufNewFile,BufRead *.inc                 set filetype=sh
-autocmd FileType ruby,python,javascript,clojure  set ts=2 sts=2 sw=2 et nu
+autocmd BufRead,BufNewFile *.ejs   set filetype=html
+autocmd BufRead,BufNewFile *.ru    set filetype=ruby
+autocmd BufNewFile,BufRead *.inc   set filetype=sh
+autocmd FileType java              set ts=8 sts=4 sw=4 et nu
 
 " Coffee-Script
-let coffee_compile_on_save = 1
+"let coffee_compile_on_save = 1
 
 " Clojure
 autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
