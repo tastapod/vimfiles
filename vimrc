@@ -28,7 +28,9 @@ nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
 set wildmenu wildmode=full completeopt+=longest
-set wildignore+=**/node_modules,**/classes,**/tmp,*.pyc,*.o,*.a,*.class,.git,.hg,.svn,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2
+set wildignore+=node_modules,classes,target,Maildir,tmp
+set wildignore+=*.pyc,*.o,*.a,*.class,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2,*~
+set wildignore+=.git,.hg,.svn,.bzr,CVS
 let g:CommandTAcceptSelectionSplitMap='<C-w>'
 
 " Store .swp files in /var/tmp with mangled names
@@ -66,6 +68,7 @@ cabbr <expr> %% expand('%:h')
 autocmd BufRead,BufNewFile *.ejs   set filetype=html
 autocmd BufRead,BufNewFile *.ru    set filetype=ruby
 autocmd BufNewFile,BufRead *.inc   set filetype=sh
+autocmd BufNewFile,BufRead *.md    set filetype=markdown
 autocmd FileType java              set ts=8 sts=4 sw=4 et nu
 
 " Coffee-Script
