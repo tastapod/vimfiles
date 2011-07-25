@@ -74,7 +74,7 @@ autocmd BufRead,BufNewFile *.ejs   set filetype=html
 autocmd BufRead,BufNewFile *.ru    set filetype=ruby
 autocmd BufNewFile,BufRead *.inc   set filetype=sh
 autocmd BufNewFile,BufRead *.md    set filetype=markdown
-autocmd FileType java              set ts=8 sts=4 sw=4 et nu
+autocmd FileType java,javascript   set ts=8 sts=4 sw=4 et nu
 autocmd FileType markdown          set fo+=a2 tw=78
 
 " Coffee-Script
