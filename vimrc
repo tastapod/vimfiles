@@ -4,13 +4,18 @@ set nocompatible
 " Editing
 set aw ai
 set et ts=8 sts=2 sw=2 nu
-set fo=tcrqwn
+set fo+=tcrqw fo-=o
 set showmatch matchtime=5
 set whichwrap=<,>,h,l,[,]
 set cursorline
 set nofoldenable
+"let maplocalleader = ","
+let mapleader = ","
+
+" Style
 highlight CursorLine cterm=bold
 highlight MatchParen ctermbg=white
+set background=dark
 
 " Filetypes
 call pathogen#runtime_append_all_bundles()
@@ -36,7 +41,7 @@ let g:CommandTAcceptSelectionSplitMap='<C-w>'
 " Store .swp files in /var/tmp with mangled names
 set directory=/var/tmp//
 
-" Using windows
+" Windows
 nmap <C-N> <C-W>w
 nmap <C-P> <C-W>W
 nmap ,n <C-W>w
@@ -55,7 +60,7 @@ set splitbelow splitright
 set mouse=a
 
 " NERD-Tree
-nmap <F9> :NERDTreeToggle<CR>
+nmap <Leader>f :NERDTreeToggle<CR>
 
 " Sessions
 set viminfo=!,'100,<50,s10,h
@@ -70,6 +75,7 @@ autocmd BufRead,BufNewFile *.ru    set filetype=ruby
 autocmd BufNewFile,BufRead *.inc   set filetype=sh
 autocmd BufNewFile,BufRead *.md    set filetype=markdown
 autocmd FileType java              set ts=8 sts=4 sw=4 et nu
+autocmd FileType markdown          set fo+=a2 tw=78
 
 " Coffee-Script
 "let coffee_compile_on_save = 1
@@ -85,8 +91,6 @@ autocmd FileType clojure nmap ,r <Plug>ClojureStartRepl
 
 let vimclojure#WantNailgun = 1
 let vimclojure#HighlightBuiltins = 1
-"let maplocalleader = ","
-let mapleader = ","
 
 " Shell scripts
 let g:is_bash=1
