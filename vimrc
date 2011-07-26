@@ -14,8 +14,7 @@ let mapleader = ","
 
 " Style
 highlight CursorLine cterm=bold
-highlight MatchParen ctermbg=white
-set background=dark
+highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
 
 " Filetypes
 call pathogen#runtime_append_all_bundles()
