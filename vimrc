@@ -1,11 +1,13 @@
 " General
 set nocompatible
+nmap <F1> <Esc>
+imap <F1> <Esc>
 
 " Editing
 set aw ai
 set et ts=8 sts=2 sw=2 nu
 set fo+=tcrqw fo-=o
-set showmatch matchtime=5
+set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set cursorline
 set nofoldenable
