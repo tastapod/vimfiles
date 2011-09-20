@@ -5,7 +5,7 @@ imap <F1> <Esc>
 
 " Editing
 set aw ai
-set et ts=8 sts=2 sw=2 nu
+set et ts=8 sts=4 sw=4 nu
 set fo+=tcrqw fo-=o
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
@@ -75,7 +75,6 @@ autocmd BufRead,BufNewFile *.ejs   set filetype=html
 autocmd BufRead,BufNewFile *.ru    set filetype=ruby
 autocmd BufNewFile,BufRead *.inc   set filetype=sh
 autocmd BufNewFile,BufRead *.md    set filetype=markdown
-autocmd FileType java,javascript   set ts=8 sts=4 sw=4 et nu
 autocmd FileType markdown,vimwiki  set fo+=a2 tw=78
 
 " Coffee-Script
