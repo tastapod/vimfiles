@@ -6,7 +6,6 @@ imap <F1> <Esc>
 " Editing
 set aw ai
 set et ts=8 sts=4 sw=4 nu
-set fo+=tcrqw fo-=o
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set cursorline
@@ -71,11 +70,13 @@ let sessionman_save_on_exit = 1
 cabbr <expr> %% expand('%:h')
 
 " General programming
-autocmd BufRead,BufNewFile *.ejs   set filetype=html
-autocmd BufRead,BufNewFile *.ru    set filetype=ruby
-autocmd BufNewFile,BufRead *.inc   set filetype=sh
-autocmd BufNewFile,BufRead *.md    set filetype=markdown
-autocmd FileType markdown,vimwiki  set fo+=a2 tw=78
+autocmd BufRead,BufNewFile *.ejs   set ft=html
+autocmd BufRead,BufNewFile *.ru    set ft=ruby
+autocmd BufRead,BufNewFile *.inc   set ft=sh
+autocmd BufRead,BufNewFile *.md    set ft=mkd
+
+autocmd FileType mkd,vimwiki  set tw=78 fo=twal1qn
+let g:vimwiki_folding=1
 
 " Coffee-Script
 "let coffee_compile_on_save = 1
