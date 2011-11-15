@@ -3,9 +3,25 @@ set nocompatible
 nmap <F1> <Esc>
 imap <F1> <Esc>
 
+" Plugins
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype off " forces reload
+filetype plugin indent on
+syntax on
+
+" Wiki
+autocmd FileType mkd,vimwiki  set tw=72 fo=twal1q2
+let g:vimwiki_folding = 1
+let g:vimwiki_hl_headers = 1
+let g:vimwiki_browsers = ['google-chrome', 'firefox']
+let g:vimwiki_list = [{'path': '~/Work/Wiki/'},
+                   \  {'path': '~/Dropbox/Writing/book/Patterns/', 'ext': '.txt'},
+                   \  {'path': '~/Dropbox/Writing/blog/Christian/'}]
+
 " Editing
 set aw ai
-set et ts=8 sts=4 sw=4 nu
+set et ts=8 sts=4 sw=4 nonu
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set cursorline
@@ -17,18 +33,11 @@ let mapleader = ","
 highlight CursorLine cterm=bold
 highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
 
-" Filetypes
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-filetype off " forces reload
-filetype plugin indent on
-syntax on
-
 " Searching
 set incsearch hlsearch
 set ignorecase smartcase
 set tags=tags,./tags
-nmap <silent> <C-c> <Esc>:!ctags -R<CR><CR>
+nmap <silent> <C-c> <Esc>:!ctags -R --exclude=node_modules<CR><CR>
 nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
@@ -74,9 +83,6 @@ autocmd BufRead,BufNewFile *.ejs   set ft=html
 autocmd BufRead,BufNewFile *.ru    set ft=ruby
 autocmd BufRead,BufNewFile *.inc   set ft=sh
 autocmd BufRead,BufNewFile *.md    set ft=mkd
-
-autocmd FileType mkd,vimwiki  set tw=78 fo=twal1qn
-let g:vimwiki_folding=1
 
 " Coffee-Script
 "let coffee_compile_on_save = 1
