@@ -17,7 +17,7 @@ let g:vimwiki_hl_headers = 1
 let g:vimwiki_browsers = ['google-chrome', 'firefox']
 let g:vimwiki_list = [{'path': '~/Work/Wiki/'},
                    \  {'path': '~/Dropbox/Writing/book/Patterns/', 'ext': '.txt'},
-                   \  {'path': '~/Dropbox/Writing/blog/Christian/'}]
+                   \  {'path': '~/Dropbox/Writing/blog/Christian/', 'ext': '.txt'}]
 
 " Editing
 set aw ai
@@ -32,6 +32,7 @@ let mapleader = ","
 " Style
 highlight CursorLine cterm=bold
 highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
+let xml_use_html = 1
 
 " Searching
 set incsearch hlsearch
