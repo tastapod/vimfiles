@@ -4,6 +4,7 @@ nmap <F1> <Esc>
 imap <F1> <Esc>
 
 " Plugins
+let xml_use_html = 1
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 filetype off " forces reload
@@ -11,28 +12,32 @@ filetype plugin indent on
 syntax on
 
 " Wiki
-autocmd FileType mkd,vimwiki  set tw=72 fo=twal1q2
 let g:vimwiki_folding = 1
 let g:vimwiki_hl_headers = 1
 let g:vimwiki_browsers = ['google-chrome', 'firefox']
 let g:vimwiki_list = [{'path': '~/Work/Wiki/'},
-                   \  {'path': '~/Dropbox/Writing/book/Patterns/', 'ext': '.txt'},
-                   \  {'path': '~/Dropbox/Writing/blog/Christian/', 'ext': '.txt'}]
+                   \  {'path': '~/Dropbox/Writing/book/Patterns/',
+                   \    'ext': '.asc'},
+                   \  {'path': '~/Dropbox/Writing/blog/Christian/',
+                   \    'ext': '.asc',
+                   \    'auto_export': 1}]
 
 " Editing
-set aw ai
-set et ts=8 sts=4 sw=4 nonu
+set autowrite autoindent
+set nojoinspaces            " Don't put 2 spaces after a full stop
+set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set cursorline
 set nofoldenable
 "let maplocalleader = ","
 let mapleader = ","
+nmap j gj
+nmap k gk
 
 " Style
 highlight CursorLine cterm=bold
 highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
-let xml_use_html = 1
 
 " Searching
 set incsearch hlsearch
@@ -79,14 +84,15 @@ let sessionman_save_on_exit = 1
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:h')
 
-" General programming
-autocmd BufRead,BufNewFile *.ejs   set ft=html
-autocmd BufRead,BufNewFile *.ru    set ft=ruby
-autocmd BufRead,BufNewFile *.inc   set ft=sh
-autocmd BufRead,BufNewFile *.md    set ft=mkd
+" Writing
+autocmd FileType mkd,vimwiki,html   set formatoptions=aw12
 
-" Coffee-Script
-"let coffee_compile_on_save = 1
+" General programming
+autocmd BufRead,BufNewFile *.ejs    set filetype=html
+autocmd BufRead,BufNewFile *.ru     set filetype=ruby
+autocmd BufRead,BufNewFile *.inc    set filetype=sh
+autocmd BufRead,BufNewFile *.md     set filetype=mkd
+autocmd FileType javascript,ruby,sh set number
 
 " Clojure
 autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
