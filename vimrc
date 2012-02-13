@@ -84,15 +84,15 @@ let sessionman_save_on_exit = 1
 " Let %% expands to directory of %
 cabbr <expr> %% expand('%:h')
 
-" Writing
-autocmd FileType mkd,vimwiki,html   set formatoptions=aw12
-
-" General programming
+" Filetypes
 autocmd BufRead,BufNewFile *.ejs    set filetype=html
 autocmd BufRead,BufNewFile *.ru     set filetype=ruby
 autocmd BufRead,BufNewFile *.inc    set filetype=sh
-autocmd BufRead,BufNewFile *.md     set filetype=mkd
+autocmd BufRead,BufNewFile *.md     set filetype=markdown
 autocmd FileType javascript,ruby,sh set number
+
+" Writing
+autocmd FileType markdown,vimwiki,html   set formatoptions=aw12
 
 " Clojure
 autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
