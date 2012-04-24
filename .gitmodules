@@ -37,3 +37,9 @@
 [submodule "vim/bundle/xml"]
 	path = vim/bundle/xml
 	url = https://github.com/vim-scripts/xml.vim.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git
