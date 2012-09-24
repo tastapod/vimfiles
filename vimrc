@@ -48,7 +48,7 @@ nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
 set wildmenu wildmode=full completeopt+=longest
-set wildignore+=node_modules,classes,target,Maildir,tmp
+set wildignore+=node_modules/**,classes/**,target/**,Maildir/**,tmp/**,vendor/**
 set wildignore+=*.pyc,*.o,*.a,*.class,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2,*~
 set wildignore+=.git,.hg,.svn,.bzr,CVS
 let g:CommandTAcceptSelectionSplitMap='<C-w>'
@@ -89,6 +89,7 @@ autocmd BufRead,BufNewFile *.ejs    set filetype=html
 autocmd BufRead,BufNewFile *.ru     set filetype=ruby
 autocmd BufRead,BufNewFile *.inc    set filetype=sh
 autocmd BufRead,BufNewFile *.md     set filetype=markdown
+autocmd BufRead,BufNewFile *.cfg    set filetype=dosini
 autocmd FileType javascript,ruby,sh set number
 
 " Writing
