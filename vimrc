@@ -28,10 +28,13 @@ set nojoinspaces            " Don't put 2 spaces after a full stop
 set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
+set linebreak
 set cursorline
 set nofoldenable
 "let maplocalleader = ","
 let mapleader = ","
+
+" Make j and k move sensibly within a wrapped line
 nmap j gj
 nmap k gk
 
@@ -93,7 +96,7 @@ autocmd BufRead,BufNewFile *.cfg    set filetype=dosini
 autocmd FileType javascript,ruby,sh set number
 
 " Writing
-autocmd FileType markdown,vimwiki,html   set formatoptions=aw12
+autocmd FileType markdown,vimwiki,html   set formatoptions=w12
 
 " Clojure
 autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
