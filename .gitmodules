@@ -46,3 +46,6 @@
 [submodule "vim/bundle/vim-leanpub"]
 	path = vim/bundle/vim-leanpub
 	url = https://github.com/joshearl/vim-leanpub
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang
