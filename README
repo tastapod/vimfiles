@@ -9,3 +9,8 @@
 git clone --recursive git://github.com/tastapod/vimfiles.git
 ln -s $PWD/vimfiles/vim ~/.vim
 ln -s $PWD/vimfiles/vimrc ~/.vimrc
+
+# To add a new plugin:
+#
+# git submodule add https://github.com/new/thingy vim/bundle/thingy
+# git commit -m "[dn] Added thingy"
