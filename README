@@ -1,14 +1,14 @@
 # This is my vim setup.
 #
-# I'm using pathogen to keep all my vim plugins in separate directories,
-# and git submodules to manage both pathogen itself and all the plugins.
+# I'm using vundle to keep all my vim plugins in separate directories.
 #
 # To get started, just move your existing .vim and .vimrc out of the way and
 # source this file, or type the following from wherever you want to install:
 
-git clone --recursive git://github.com/tastapod/vimfiles.git
-ln -s $PWD/vimfiles/vim ~/.vim
-ln -s $PWD/vimfiles/vimrc ~/.vimrc
+git clone https://github.com/tastapod/vimfiles.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 
 # To add a new plugin:
 #
