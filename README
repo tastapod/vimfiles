@@ -8,9 +8,10 @@
 git clone https://github.com/tastapod/vimfiles.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
+vim +BundleInstall
 
 # To add a new plugin:
 #
-# git submodule add https://github.com/new/thingy vim/bundle/thingy
-# git commit -m "[dn] Added thingy"
+# - Add Bundle "owner/repo" in ~/.vimrc
+# - Run :BundleInstall in vim
+
