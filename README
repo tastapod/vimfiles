@@ -7,7 +7,7 @@
 
 git clone https://github.com/tastapod/vimfiles.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/vundle
 vim +BundleInstall
 
 # To add a new plugin:

@@ -6,7 +6,8 @@ imap <F1> <Esc>
 " Plugins
 let xml_use_html = 1
 filetype off " forces reload
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/vundle
+set rtp+=/usr/share/vim/addons
 call vundle#rc()
 
 Bundle "altercation/vim-colors-solarized"
