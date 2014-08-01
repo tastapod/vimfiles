@@ -101,6 +101,7 @@ autocmd BufRead,BufNewFile *.ru     set filetype=ruby
 autocmd BufRead,BufNewFile *.inc    set filetype=sh
 autocmd BufRead,BufNewFile *.md     set filetype=mkd
 autocmd BufRead,BufNewFile *.cfg    set filetype=dosini
+autocmd BufRead,BufNewFile *.adoc   set filetype=asciidoc
 autocmd FileType javascript,ruby,sh set number
 
 " Writing
