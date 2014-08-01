@@ -1,9 +1,9 @@
 " General
 set nocompatible
-nmap <F1> <Esc>
-imap <F1> <Esc>
-
-" Plugins
+set shell=/bin/bash
+set modeline modelines=4
+noremap <F1> <Esc>
+inoremap <F1> <Esc>
 let xml_use_html = 1
 
 " Vundle
@@ -41,31 +41,14 @@ filetype plugin indent on
 syntax on
 
 " Style
-set background=dark
-"color blue
-"color darkblue
-"color default
-"color delek
-"color desert
-"color elflord
-"color evening
-"color koehler
-"color Monokai
-"color morning
-"color murphy
-"color pablo
-"color peachpuff
-"color ron
-"color shine
-"color slate
-"color solarized
-"color torte
-"color zellner
-
+"set t_Co=16
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+color solarized
 set cursorline
-highlight CursorLine term=bold cterm=bold guibg=Black
-highlight MatchParen cterm=none ctermbg=none ctermfg=yellow
-highlight Folded     term=bold cterm=bold guifg=fg guibg=bg
 
 " Editing
 set autowrite autoindent
