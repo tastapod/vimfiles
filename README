@@ -7,11 +7,11 @@
 
 git clone https://github.com/tastapod/vimfiles.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-git clone https://github.com/gmarik/vundle.git ~/.vim/vundle
-vim +BundleInstall
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # To add a new plugin:
 #
-# - Add Bundle "owner/repo" in ~/.vimrc
-# - Run :BundleInstall in vim
+# - Add Plugin 'owner/repo' in ~/.vimrc
+# - Run :PluginInstall in vim
 

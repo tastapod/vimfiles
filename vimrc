@@ -5,61 +5,38 @@ imap <F1> <Esc>
 
 " Plugins
 let xml_use_html = 1
+
+" Vundle
 filetype off " forces reload
-set rtp+=~/.vim/vundle
-set rtp+=/usr/share/vim/addons
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim' " Vundle manages itself
 
-Bundle "altercation/vim-colors-solarized"
-Bundle "Blackrush/vim-gocode"
-Bundle "bling/vim-airline"
-"Bundle "bling/vim-bufferline"
-"Bundle "bronson/vim-trailing-whitespace"
-Bundle "dgryski/vim-godef"
-Bundle "edsono/vim-matchit"
-"Bundle "fholgado/minibufexpl.vim"
-Bundle "guns/vim-clojure-static"
-Bundle "jnwhiteh/vim-golang"
-Bundle "joshearl/vim-leanpub"
-"Bundle "kchmck/vim-coffee-script"
-Bundle "kien/ctrlp.vim"
-"Bundle "LaTeX-Box-Team/LaTeX-Box"
-"Bundle "majutsushi/tagbar"
-"Bundle "mattn/goplayground-vim"
-"Bundle "mattn/webapi-vim"
-"Bundle "msanders/snipmate.vim"
-Bundle "othree/html5.vim"
-Bundle "Raimondi/delimitMate"
-"Bundle "scrooloose/nerdtree"
-"Bundle "scrooloose/syntastic"
-Bundle "sickill/vim-monokai"
-Bundle "sickill/vim-pasta"
-Bundle "sukima/xmledit"
-Bundle "timcharper/textile.vim"
-Bundle "tpope/vim-abolish"
-Bundle "tpope/vim-fugitive"
-"Bundle "tpope/vim-haml"
-Bundle "tpope/vim-markdown"
-Bundle "tpope/vim-pathogen"
-Bundle "tpope/vim-sensible"
-Bundle "tpope/vim-sensible"
-Bundle "tpope/vim-surround"
-"Bundle "tpope/vim-vividchalk"
-Bundle "vim-scripts/SuperTab-continued."
-Bundle "vimoutliner/vimoutliner"
-Bundle "vimoutliner-colorscheme-fix"
-"Bundle "vim-scripts/Gist.vim"
-"Bundle "vim-scripts/Gundo"
-Bundle "vim-scripts/HTML-AutoCloseTag"
-"Bundle "vim-scripts/IndexedSearch"
-Bundle "vim-scripts/sessionman.vim"
-"Bundle "vim-scripts/tagexplorer.vim"
-"Bundle "vim-scripts/vibrantink"
-"Bundle "vim-scripts/wombat256.vim"
-"Bundle "wincent/Command-T.git"
-"Bundle "xolox/vim-easytags"
-"Bundle "xolox/vim-misc"
-
+Plugin 'Blackrush/vim-gocode'
+Plugin 'Raimondi/delimitMate'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'asciidoc.vim'
+Plugin 'bling/vim-airline'
+Plugin 'dgryski/vim-godef'
+Plugin 'edsono/vim-matchit'
+Plugin 'guns/vim-clojure-static'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'joshearl/vim-leanpub'
+Plugin 'kien/ctrlp.vim'
+Plugin 'othree/html5.vim'
+Plugin 'sickill/vim-monokai'
+Plugin 'sickill/vim-pasta'
+Plugin 'sukima/xmledit'
+Plugin 'timcharper/textile.vim'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'vim-scripts/SuperTab-continued.'
+Plugin 'vim-scripts/sessionman.vim'
+Plugin 'vimoutliner/vimoutliner'
+Plugin 'vimwiki/vimwiki'
+call vundle#end()
 filetype plugin indent on
 syntax on
 
