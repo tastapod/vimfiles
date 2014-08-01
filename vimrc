@@ -58,19 +58,15 @@ set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set foldenable foldlevelstart=99
-"let maplocalleader = ","
+let maplocalleader = ","
 let mapleader = ","
-
-" Make j and k move sensibly within a wrapped line
-nmap j gj
-nmap k gk
 
 " Searching
 set incsearch hlsearch
 set ignorecase smartcase
 set tags=tags,./tags
-nmap <silent> <C-c> <Esc>:!ctags -R --exclude=node_modules<CR><CR>
-nmap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
+noremap <silent> <C-c> <Esc>:!ctags -R --exclude=node_modules<CR><CR>
+noremap <silent> ,h <Esc>:set invhls<CR>:set hls?<CR>
 
 " Completions
 set wildmenu wildmode=full completeopt+=longest
@@ -78,7 +74,6 @@ set wildignore+=node_modules/**,classes/**,target/**,Maildir/**,tmp/**,vendor/**
 set wildignore+=*.pyc,*.o,*.a,*.class,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2,*~
 set wildignore+=.git,.hg,.svn,.bzr,CVS
 set wildignore+=bin/**,pkg/**,**/github.com/nsf/**
-"let g:CommandTAcceptSelectionSplitMap='<C-w>'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
@@ -87,12 +82,11 @@ let g:ctrlp_working_path_mode = 'ra'
 set directory=/var/tmp//
 
 " Windows
-set hidden
 set equalalways
 set splitbelow splitright
 
 " NERD-Tree
-"nmap <Leader>f :NERDTreeToggle<CR>
+"noremap <Leader>f :NERDTreeToggle<CR>
 
 " Sessions
 set viminfo=!,'100,<50,s10,h
