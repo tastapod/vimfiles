@@ -1,0 +1,1 @@
+colorscheme vo_dark

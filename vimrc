@@ -104,28 +104,17 @@ autocmd BufRead,BufNewFile *.cfg    set filetype=dosini
 autocmd BufRead,BufNewFile *.adoc   set filetype=asciidoc
 autocmd FileType javascript,ruby,sh set number
 
-" Writing
-autocmd FileType mkd,vimwiki,html   set fo=w12 lbr sw=2 sts=2 ts=2
-autocmd FileType css set lbr sw=2 sts=2
-
-" Go
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-autocmd BufRead,BufNewFile *.go     set ts=4 sts=4 sw=4 noet
+" Wiki
+let g:vimwiki_folding='syntax'
+let g:vimwiki_dir_link='index'
+let g:vimwiki_list=[{ 'path': '~/Documents',
+                    \ 'path_html': '~/Documents/Wiki',
+                    \ 'diary_rel_path': 'Diary',
+                    \ 'diary_index': 'index',
+                    \ 'auto_export': 1,
+                    \ 'custom_wiki2html': '$HOME/.vim/tools/markdown2html.sh' }]
 
 " Clojure
-autocmd FileType clojure nmap ,s <Plug>ClojureEvalToplevel
-autocmd FileType clojure nmap ,f <Plug>ClojureEvalFile
-autocmd FileType clojure nmap ,b <Plug>ClojureEvalBlock
-autocmd FileType clojure nmap ,d <Plug>ClojureDocLookupWord
-autocmd FileType clojure nmap ,i <Plug>ClojureDocLookupInteractive
-autocmd FileType clojure nmap ,j <Plug>ClojureJavadocLookupWord
-autocmd FileType clojure nmap ,r <Plug>ClojureStartRepl
-
-" Outliner
-autocmd FileType vo_base colorscheme vo_dark
-
 let vimclojure#WantNailgun = 1
 let vimclojure#HighlightBuiltins = 1
 
