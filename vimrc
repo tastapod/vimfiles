@@ -39,16 +39,16 @@ Plugin 'vimwiki/vimwiki'
 call vundle#end()
 filetype plugin indent on
 syntax on
+color solarized
 
 " Style
 "set t_Co=16
 if has('gui_running')
     set background=light
+    set guifont=Menlo\ Regular\:h15
 else
     set background=dark
 endif
-color solarized
-set cursorline
 
 " Editing
 set autowrite autoindent
@@ -58,6 +58,7 @@ set expandtab tabstop=8 softtabstop=4 shiftwidth=4
 set showmatch matchtime=2
 set whichwrap=<,>,h,l,[,]
 set foldenable foldlevelstart=99
+set spellfile=$HOME/.vimspell.en.add
 let maplocalleader = ","
 let mapleader = ","
 
@@ -74,9 +75,7 @@ set wildignore+=node_modules/**,classes/**,target/**,Maildir/**,tmp/**,vendor/**
 set wildignore+=*.pyc,*.o,*.a,*.class,*.jar,*.zip,*.tgz,*.tar.gz,*.tbz2,*~
 set wildignore+=.git,.hg,.svn,.bzr,CVS
 set wildignore+=bin/**,pkg/**,**/github.com/nsf/**
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
 
 " Store .swp files in /var/tmp with mangled names
 set directory=/var/tmp//
@@ -103,16 +102,6 @@ autocmd BufRead,BufNewFile *.md     set filetype=mkd
 autocmd BufRead,BufNewFile *.cfg    set filetype=dosini
 autocmd BufRead,BufNewFile *.adoc   set filetype=asciidoc
 autocmd FileType javascript,ruby,sh set number
-
-" Wiki
-let g:vimwiki_folding='syntax'
-let g:vimwiki_dir_link='index'
-let g:vimwiki_list=[{ 'path': '~/Documents',
-                    \ 'path_html': '~/Documents/Wiki',
-                    \ 'diary_rel_path': 'Diary',
-                    \ 'diary_index': 'index',
-                    \ 'auto_export': 1,
-                    \ 'custom_wiki2html': '$HOME/.vim/tools/markdown2html.sh' }]
 
 " Clojure
 let vimclojure#WantNailgun = 1
