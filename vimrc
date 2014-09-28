@@ -1,6 +1,6 @@
 " General
 set nocompatible
-set shell=/bin/bash
+set shell=/bin/bash secure
 set modeline modelines=4
 noremap <F1> <Esc>
 inoremap <F1> <Esc>
