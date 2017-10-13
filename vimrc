@@ -6,49 +6,39 @@ noremap <F1> <Esc>
 inoremap <F1> <Esc>
 let xml_use_html = 1
 
-" Vundle
+" Plug
 filetype off " forces reload
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim' " Vundle manages itself
+call plug#begin('~/.vim/plugged')
 
-Plugin 'Blackrush/vim-gocode'
-Plugin 'Raimondi/delimitMate'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'asciidoc.vim'
-Plugin 'bling/vim-airline'
-Plugin 'dgryski/vim-godef'
-Plugin 'edsono/vim-matchit'
-Plugin 'guns/vim-clojure-static'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'joshearl/vim-leanpub'
-Plugin 'kien/ctrlp.vim'
-Plugin 'othree/html5.vim'
-Plugin 'sickill/vim-monokai'
-Plugin 'sickill/vim-pasta'
-Plugin 'sukima/xmledit'
-Plugin 'timcharper/textile.vim'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/HTML-AutoCloseTag'
-Plugin 'vim-scripts/SuperTab-continued.'
-Plugin 'vim-scripts/sessionman.vim'
-Plugin 'vimoutliner/vimoutliner'
-Plugin 'vimwiki/vimwiki'
-call vundle#end()
+Plug 'Blackrush/vim-gocode'
+Plug 'Raimondi/delimitMate'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+Plug 'dgryski/vim-godef'
+Plug 'ervandew/supertab'
+Plug 'guns/vim-clojure-static', {'for': 'clojure'}
+Plug 'jnwhiteh/vim-golang'
+Plug 'joshearl/vim-leanpub'
+Plug 'kien/ctrlp.vim'
+Plug 'othree/html5.vim'
+Plug 'sickill/vim-monokai'
+Plug 'sickill/vim-pasta'
+Plug 'sukima/xmledit'
+Plug 'timcharper/textile.vim'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/HTML-AutoCloseTag'
+Plug 'vim-scripts/sessionman.vim'
+Plug 'vimoutliner/vimoutliner', {'for': ['votl', 'otl']}
+Plug 'vimwiki/vimwiki', {'for': 'vimwiki'}
+
+call plug#end()
+
 filetype plugin indent on
 syntax on
+set background=light
 color solarized
-
-" Style
-"set t_Co=16
-if has('gui_running')
-    set background=light
-    set guifont=Menlo\ Regular\:h15
-else
-    set background=dark
-endif
 
 " Editing
 set autowrite autoindent
