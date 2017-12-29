@@ -7,13 +7,11 @@ inoremap <F1> <Esc>
 let xml_use_html = 1
 
 " Plug
-filetype off " forces reload
 call plug#begin('~/.vim/plugged')
 
 Plug 'Blackrush/vim-gocode'
 Plug 'Raimondi/delimitMate'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
 Plug 'dgryski/vim-godef'
 Plug 'ervandew/supertab'
 Plug 'guns/vim-clojure-static', {'for': 'clojure'}
@@ -35,8 +33,6 @@ Plug 'vimwiki/vimwiki', {'for': 'vimwiki'}
 
 call plug#end()
 
-filetype plugin indent on
-syntax on
 set background=light
 color solarized
 
