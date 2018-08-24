@@ -11,6 +11,6 @@ Then set up vim-plug using the [installation instructions](https://github.com/ju
 To add a new plugin:
 
 - Add `Plug 'owner/repo'` in ~/.vimrc
-- Run `:PluginInstall` from vim
+- Run `:PlugInstall` from vim
 
 [1]: https://github.com/junegunn/vim-plug
