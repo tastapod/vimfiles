@@ -34,7 +34,7 @@ Plug 'vimwiki/vimwiki', {'for': 'vimwiki'}
 call plug#end()
 
 set background=light
-color solarized
+" color solarized
 
 " Editing
 set autowrite autoindent
