@@ -5,8 +5,7 @@ source this file, or type the following from wherever you want to install:
 
     git clone https://github.com/tastapod/vimfiles.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
-
-Then set up vim-plug using the [installation instructions](https://github.com/junegunn/vim-plug/blob/master/README.md#installation).
+    vim +:PlugInstall +:q +:q
 
 To add a new plugin:
 
