@@ -1,7 +1,8 @@
 " General
 set nocompatible
-set shell=/bin/bash secure
+set shell=/bin/zsh secure
 set modeline modelines=4
+set regexpengine=0
 noremap <F1> <Esc>
 inoremap <F1> <Esc>
 let xml_use_html = 1
@@ -94,4 +95,4 @@ let vimclojure#WantNailgun = 1
 let vimclojure#HighlightBuiltins = 1
 
 " Shell scripts
-let g:is_bash=1
+let g:is_zsh=1
